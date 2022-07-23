@@ -1,0 +1,16 @@
+==========[Create DB]==========
+{'create':'DB','name':'Profiles'}
+{'getAll':'DB'}
+
+==========[Create Collections]==========
+{'create':'collection','name':'SDE-II','dB':'Profiles'}
+{'getAll':'COLLECTIONS','dB':'Profiles'}
+
+==========[Inserting Docs]==========
+{'create':'DOC','dB':'Profiles','collection':'SDE-II','doc':{"name":"Subrato Mondal","age":29,"skills":"Java","exp":4}}
+{'create':'DOC','dB':'Profiles','collection':'SDE-II','doc':{"name":"John","age":35,"skills":"JavaScript","exp":6}}
+{'create':'DOC','dB':'Profiles','collection':'SDE-II','doc':{"name":"Ricky","age":35,"skills":"JavaScript","exp":10}}
+
+==========[Querying Docs]==========
+{'query':{'*':'*'},'dB':'Profiles','collection':'SDE-II'}
+{'query':{'and':[{'field':'exp','value':2,'op':'$gt'}, {'or':[{'field':'skills','value':'Java','op':'$eq'},{'field':'exp','value':7,'op':'$lt'}]}]},'dB':'Profiles','collection':'SDE-II'}
